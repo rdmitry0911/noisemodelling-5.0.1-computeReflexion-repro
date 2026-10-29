@@ -1,0 +1,40 @@
+2026-10-29T14:51:04,580  INFO NoiseMapByReceiverMaker:285 This computation area contains 81 receivers 594 sound sources and 144 buildings
+2026-10-29T14:51:04,590 ERROR ThreadPathFinder:78 Index 0 out of bounds for length 0
+java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:361) ~[?:?]
+	at java.util.ArrayList.get(ArrayList.java:427) ~[?:?]
+	at org.noise_planet.noisemodelling.pathfinder.PathFinder.computeReflexion(PathFinder.java:761) ~[noisemodelling-pathfinder-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.pathfinder.PathFinder.rcvSrcPropagation(PathFinder.java:312) ~[noisemodelling-pathfinder-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.pathfinder.PathFinder.computeRaysAtPosition(PathFinder.java:263) ~[noisemodelling-pathfinder-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.pathfinder.ThreadPathFinder.call(ThreadPathFinder.java:71) [noisemodelling-pathfinder-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.pathfinder.PathFinder.run(PathFinder.java:142) [noisemodelling-pathfinder-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.jdbc.NoiseMapByReceiverMaker.evaluateCell(NoiseMapByReceiverMaker.java:310) [noisemodelling-jdbc-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.jdbc.NoiseMapByReceiverMaker.run(NoiseMapByReceiverMaker.java:353) [noisemodelling-jdbc-5.0.1.jar:5.0.1]
+--
+2026-10-29T14:51:04,615  INFO NoiseMapWriter:430 Write done, apply primary keys
+2026-10-29T14:51:04,686  INFO NoiseMapWriter:432 Primary keys applied
+2026-10-29T14:51:05,041 ERROR Main:284 java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+java.lang.RuntimeException: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at org.noise_planet.noisemodelling.pathfinder.PathFinder.run(PathFinder.java:144) ~[noisemodelling-pathfinder-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.jdbc.NoiseMapByReceiverMaker.evaluateCell(NoiseMapByReceiverMaker.java:310) ~[noisemodelling-jdbc-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.jdbc.NoiseMapByReceiverMaker.run(NoiseMapByReceiverMaker.java:353) ~[noisemodelling-jdbc-5.0.1.jar:5.0.1]
+	at org.noise_planet.noisemodelling.jdbc.NoiseMapByReceiverMaker$run$2.call(Unknown Source) ~[?:?]
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47) ~[groovy-2.5.23.jar:2.5.23]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:115) ~[groovy-2.5.23.jar:2.5.23]
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:135) ~[groovy-2.5.23.jar:2.5.23]
+	at org.noise_planet.noisemodelling.wps.NoiseModelling.Noise_level_from_traffic.exec(Noise_level_from_traffic.groovy:597) ~[noisemodelling-wps-5.0.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+--
+	at groovy.lang.Script.invokeMethod(Script.java:97) ~[groovy-2.5.23.jar:2.5.23]
+	at org.noise_planet.noisemodelling.runner.Main.main(Main.java:265) [noisemodelling-wps-5.0.1.jar:?]
+Caused by: java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64) ~[?:?]
+	at jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70) ~[?:?]
+	at jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266) ~[?:?]
+	at java.util.Objects.checkIndex(Objects.java:361) ~[?:?]
