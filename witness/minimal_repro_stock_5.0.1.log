@@ -1,0 +1,10 @@
+SLF4J(I): Connected with provider of type [org.slf4j.reload4j.Reload4jServiceProvider]
+Exception in thread "main" java.lang.IndexOutOfBoundsException: Index 0 out of bounds for length 0
+	at java.base/jdk.internal.util.Preconditions.outOfBounds(Preconditions.java:64)
+	at java.base/jdk.internal.util.Preconditions.outOfBoundsCheckIndex(Preconditions.java:70)
+	at java.base/jdk.internal.util.Preconditions.checkIndex(Preconditions.java:266)
+	at java.base/java.util.Objects.checkIndex(Objects.java:361)
+	at java.base/java.util.ArrayList.get(ArrayList.java:427)
+	at org.noise_planet.noisemodelling.pathfinder.PathFinder.computeReflexion(PathFinder.java:761)
+	at org.noise_planet.noisemodelling.pathfinder.TestEmptyReflectionPath.computeSourceOnWall(TestEmptyReflectionPath.java:68)
+	at org.noise_planet.noisemodelling.pathfinder.TestEmptyReflectionPath.main(TestEmptyReflectionPath.java:38)
